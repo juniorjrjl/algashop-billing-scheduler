@@ -37,7 +37,9 @@ dependencies {
 	implementation(libs.mapstruct)
 	implementation(libs.spring.boot.starter.jdbc)
 	implementation(libs.spring.boot.starter.validation)
-	implementation(libs.spring.boot.starter.webmvc)
+	implementation(libs.spring.boot.starter.webmvc){
+		exclude(group = "org.springframework.boot", module = "spring-boot-starter-tomcat")
+	}
 
 	mockitoAgent(libs.mockito.core) { isTransitive = false }
 
