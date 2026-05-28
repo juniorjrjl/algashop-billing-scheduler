@@ -1,0 +1,50 @@
+[versions]
+assertj = "3.27.7"
+datafaker = "2.5.4"
+lombok-mapstruct = "0.2.0"
+mapstruct = "1.6.3"
+postgresql = "42.7.2"
+springBoot = "4.0.6"
+rest-assured = "6.0.0"
+springCloud = "2025.1.0"
+springCloudContract = "5.0.2"
+springDependencyManagement = "1.1.7"
+
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "springBoot" }
+spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "springDependencyManagement" }
+spring-cloud-contract = { id = "org.springframework.cloud.contract", version.ref = "springCloudContract" }
+
+[libraries]
+#ANNOTATION PROCESSORS
+lombok-mapstruct-binding = { group = "org.projectlombok", name = "lombok-mapstruct-binding", version.ref = "lombok-mapstruct" }
+mapstruct-processor = { group = "org.mapstruct", name = "mapstruct-processor", version.ref = "mapstruct" }
+
+#COMPILE ONLY
+lombok = { group = "org.projectlombok", name = "lombok" }
+
+#IMPLEMENTATION
+mapstruct = { group = "org.mapstruct", name = "mapstruct", version.ref = "mapstruct" }
+spring-boot-starter-jdbc = { group = "org.springframework.boot", name = "spring-boot-starter-jdbc" }
+spring-boot-starter-validation = { group = "org.springframework.boot", name = "spring-boot-starter-validation" }
+spring-boot-starter-webmvc = { group = "org.springframework.boot", name = "spring-boot-starter-webmvc" }
+
+#MOCKITO AGENTS
+mockito-core = { group = "org.mockito", name = "mockito-core" }
+
+#
+postgresql = { group = "org.postgresql", name = "postgresql", version.ref = "postgresql" }
+
+#TEST IMPLEMENTATION
+datafaker = { group = "net.datafaker", name = "datafaker", version.ref = "datafaker" }
+assertj-core = { group = "org.assertj", name = "assertj-core", version.ref = "assertj" }
+rest-assured = { group = "io.rest-assured", name = "rest-assured", version.ref = "rest-assured" }
+rest-assured-spring-mock-mvc = { group = "io.rest-assured", name = "spring-mock-mvc", version.ref = "rest-assured" }
+spring-cloud-starter-contract-verifier = { group = "org.springframework.cloud", name = "spring-cloud-starter-contract-verifier" }
+spring-boot-starter-webmvc-test = { group = "org.springframework.boot", name = "spring-boot-starter-webmvc-test" }
+
+# TEST RUNTIME
+junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher" }
+
+#EXTRA
+spring-cloud-dependencies = { group = "org.springframework.cloud", name = "spring-cloud-dependencies", version.ref = "springCloud" }
